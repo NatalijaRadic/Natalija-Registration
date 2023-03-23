@@ -8,6 +8,12 @@ class LoginPage{
     get submitBtn(){
         return cy.get('button[type="submit"]')
     }
+
+    loginUser(userEmail, password){
+        this.emailInputField.type(userEmail);
+        this.passwordInputField.type(password);
+        this.submitBtn.click();
+    }
     
 }
 

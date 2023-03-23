@@ -20,6 +20,14 @@ class RegisterPage{
     get submitBtn(){
         return cy.get('button[type="submit"]');
     }
+    get headingBtn(){
+        return cy.get('h1[class="title-style"]');
+    }
+    get alert(){
+        return cy.get('p[class="alert alert-danger"]');
+    }
+    get logoutBtn(){
+        return cy.get('')
+    }
 }
-
 export const registerPage = new RegisterPage;
