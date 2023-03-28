@@ -18,13 +18,13 @@ class CreateGalleryPage{
         return cy.get('i[class="fas fa-chevron-circle-down"]');
     }
     get addImageBtn(){
-        return cy.get('//*[@id="app"]/div[2]/div/div/form/div[3]/button');
+        return cy.get('button').contains('Add image');
     }
     get submitBtn(){
-        return cy.get('//*[@id="app"]/div[2]/div/div/form/button[1]');
+        return cy.get('button').contains('Submit');
     }
     get cancelBtn(){
-        return cy.get('//*[@id="app"]/div[2]/div/div/form/button[2]')
+        return cy.get('button').contains('Cancel');
     }
 }
 

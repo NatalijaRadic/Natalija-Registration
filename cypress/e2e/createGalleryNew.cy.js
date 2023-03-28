@@ -40,7 +40,7 @@ describe('Create new gallery', () => {
         .and('have.id', 'title')
        // .and('be.a', 'string')
         .and('have.css', 'border-radius', '20px')
-        .and('have.text', 'required');
+        .and('have.attr', 'required');
 
         createGalleryPage.descriptionInputField.type('Animal-dog')
         createGalleryPage.descriptionInputField.should('be.visible')
