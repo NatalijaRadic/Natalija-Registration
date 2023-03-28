@@ -3,7 +3,7 @@
 const locators = require('../fixtures/locators.json')
 import { registerPage } from '../page_object/registerPage';
 import {faker} from '@faker-js/faker'
-import { number } from 'assert-plus';
+import { number, regexp } from 'assert-plus';
 var pass = faker.internet.password();
 var userEmail = faker.internet.email();
 var userFirstName = faker.name.firstName();
@@ -22,7 +22,7 @@ describe("Register page", () => {
         registerPage.firstNameInputField.should('be.visible')
         .and('have.value', userFirstName);
         registerPage.lastNameInputField.should('be.visible');
-        registerPage.lastNameInputField.type(faker.name.lastName());
+        registerPage.lastNameInputField.type(faker.name.lastName())
         registerPage.emailInputField.type(faker.internet.email());
         registerPage.passwordInputField.type(pass);
         registerPage.passwordConfirmationInputField.type(pass);

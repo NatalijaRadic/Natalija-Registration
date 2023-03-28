@@ -1,12 +1,12 @@
 class LoginPage{
     get emailInputField(){
-        return cy.get('#email');
+        return cy.get('input[id="email"]');
     }
     get passwordInputField(){
-        return cy.get('#password');
+        return cy.get('input[id="password"]');
     }
     get submitBtn(){
-        return cy.get('button[type="submit"]')
+        return cy.get('button[type="submit"]');
     }
 
     loginUser(userEmail, password){
@@ -17,4 +17,4 @@ class LoginPage{
     
 }
 
-export default loginPage = new LoginPage()
+export const loginPage = new LoginPage;
